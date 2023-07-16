@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --orange: #dc6805;
+    --yelow: #f2cd36;
+    --lightgray: #eee;
+    --gray: #333;
+    --cream: #e5d7e5;
+    --white: #fff;
+    --black: #000;
+    --transition: 0.3s ease;
+    --font: 16px;
+}
+/**Basic style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--cream);
+    color: var(--gray);
+    line-height: 1.6;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+}
+h2 {
+    font-size: 2.5rem;
+}
+a {
+    transition: var(--transition);
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    padding: 15px 30px;
+    background: var(--orange);
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    color: var(--white);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--gray);
+}
+/**HEADER*/
+header {
+    background: linear-gradient(to left,rgba(228,140,5,0.5),rgba(242,205,54,0.5)),url(img/header.jpg);
+    background-size: cover;
+    height: 80vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-size: 7rem;
+    
+
+}
+header span {
+    color: var(--white);
+}
+header p {
+    font-size: 2rem;
+}
+/**Main*/
+.main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -180px;
+}
+article{
+    background: var(--white);
+    flex:2;
+}
+aside {
+    background: var(--yelow);
+    flex: 1;
+}
+.post {
+    padding: 40px;
+}
+.post:nth-child(even){
+    background-color: var(--lightgray);
+}
+.post .meta {
+    border: 1px solid var(--gray);
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+aside div {
+    padding: 20px 40px;
+}
+aside h3 {
+    font-size: 1.5rem;
+}
+aside input {
+    padding: 10px;
+}
+aside li {
+    border-bottom: 1px solid var(--orange);
+}
+aside a {
+    color: var(--gray);
+}
+aside a:hover {
+    color: var(--orange);
+}
+img {
+    display: block;
+    width: 100%;
+}
+/*Footer*/
+footer {
+    background: var(--orange);
+    padding: 50px;
+    text-align: center;
+    color: var(--white);
+    margin-top: 30px;
+}
+/***Responsive*/
+@media(max-width:767px){
+   header h1 {
+    font-size: 3.5rem;
+   }
+   header p {
+    font-size: 1rem;
+    margin-bottom: 60px;
+   }
+   
+   header {
+    height: 70vh;
+   }
+   .main {
+    width: 90%;
+   }
+   .post p+p {
+    text-align: justify;
+   }
+}
